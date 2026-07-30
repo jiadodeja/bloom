@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Jay</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Cormorant+Garamond:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- floating petals, drawn behind everything -->
+  <canvas id="petals-bg"></canvas>
+
+  <main id="scene">
+    <!-- bouquet.js will fill this with a generated SVG bouquet -->
+    <div id="bouquet"></div>
+
+    <!-- heart.js will fill this with a small pulsing petal heart -->
+    <div id="heart"></div>
+
+    <!-- the message, revealed after the bouquet blooms -->
+    <div id="message">
+      <h1>Jay</h1>
+      <p>I love you</p>
+    </div>
+  </main>
+
+  <script src="petals.js" defer></script>
+  <script src="bouquet.js" defer></script>
+  <script src="heart.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

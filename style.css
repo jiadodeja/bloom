@@ -1,0 +1,87 @@
+:root {
+  --bg: #08080c;
+  --pink: #ff4d94;
+  --magenta: #ff1f75;
+  --gold: #ffd23f;
+  --cyan: #4deeea;
+  --violet: #b967ff;
+  --ink: #f3ecfa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 50% 40%, #16121f 0%, var(--bg) 70%);
+}
+
+/* ambient petal canvas, fixed behind everything */
+#petals-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#scene {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#heart {
+  height: 90px;
+}
+
+#bouquet {
+  width: min(90vw, 480px);
+  height: min(60vh, 520px);
+}
+
+#message {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+#message.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#message h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--pink);
+  font-weight: 600;
+  text-shadow: 0 0 24px rgba(255, 77, 148, 0.45);
+}
+
+#message p {
+  margin-top: 0.25rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
